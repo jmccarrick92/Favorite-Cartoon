@@ -1,35 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// Import the main CSS file for styling the application
 import './App.css'
+// Import the Image component
+import Image from './components/Image'
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
+// Define the main App component
+function App(){
+  return(
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    {/* Main header for the application */}
+    <h2 className='gundamHeader'>Favorite Mobile Suits from Gundam Wing</h2>
+    {/* Container for the images, using Flexbox for layout */}
+    <div className="image-container">
+      {/* Individual Image components with their respective props */}
+      <Image img_file={"wing-gundam.jpg"} width="400px" height="400px" alt="Picture of Wing Gundam" />
+      <br></br>
+      <Image img_file={"deathscythe.jpg"} width="400px" height="400px" alt="Picture of Deathscythe" />
+      <br></br>
+      <Image img_file={"sandrock.jpg"} width="400px" height="400px" alt="Picture of Sandrock" />
+      <br></br>
+      <Image img_file={"epyon.jpg"} width="400px" height="400px" alt="Picture of Epyon" />
+    </div>
     </>
-  )
+  );
 }
 
+// Export the App component as the default export
 export default App
