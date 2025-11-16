@@ -12,13 +12,22 @@ function App(){
     {/* Container for the images, using Flexbox for layout */}
     <div className="image-container">
       {/* Individual Image components with their respective props */}
-      <Image img_file={"wing-gundam.jpg"} width="400px" height="400px" alt="Picture of Wing Gundam" />
-      <br></br>
-      <Image img_file={"deathscythe.jpg"} width="400px" height="400px" alt="Picture of Deathscythe" />
-      <br></br>
-      <Image img_file={"sandrock.jpg"} width="400px" height="400px" alt="Picture of Sandrock" />
-      <br></br>
-      <Image img_file={"epyon.jpg"} width="400px" height="400px" alt="Picture of Epyon" />
+      <div className="image-item">
+        <h3>Wing Gundam</h3>
+        <Image img_file={"wing-gundam.jpg"} width="350px" height="350px" alt="Picture of Wing Gundam" />
+      </div>
+      <div className="image-item">
+        <h3>Deathscythe</h3>
+        <Image img_file={"deathscythe.jpg"} width="350px" height="350px" alt="Picture of Deathscythe" />
+      </div>
+      <div className="image-item">
+        <h3>Sandrock</h3>
+        <Image img_file={"sandrock.jpg"} width="350px" height="350px" alt="Picture of Sandrock" />
+      </div>
+      <div className="image-item">
+        <h3>Epyon</h3>
+        <Image img_file={"epyon.jpg"} width="350px" height="350px" alt="Picture of Epyon" />
+      </div>
     </div>
     </>
   );
