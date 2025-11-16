@@ -9,7 +9,7 @@
 /* Styles for the image components */
 .img_comp {
   border: 4px solid rgb(27, 97, 163); /* Blue border */
-  border-radius: 50%; /* Makes the image circular */
+  border-radius: 20px; /* Makes the image square with rounded corners */
 }
 
 /* Styles for the body element (background image) */
@@ -23,15 +23,27 @@ body {
 
 /* Styles for the image container (Flexbox layout) */
 .image-container {
-  display: flex; /* Enable Flexbox */
-  flex-wrap: wrap; /* Allow images to wrap to the next line */
-  gap: 20px; /* Space between images */
-  justify-content: center; /* Center images horizontally */
+  display: grid; /* Enable CSS Grid */
+  grid-template-columns: repeat(2, 1fr); /* Create two columns of equal width */
+  gap: 10px; /* Space between grid items */
+  justify-content: center; /* Center the grid horizontally */
+  place-items: center; /* Center items within each grid cell */
+}
+
+/* Styles for each individual image item (image and title) */
+.image-item {
+  text-align: center; /* Center the text and image within each item */
+}
+
+.image-item h3 {
+  color: #888888; /* Solid grey color, same as .gundamHeader */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Subtle text shadow, same as .gundamHeader */
+  font-size: 30px;
 }
 
 /* Styles for the main header */
 .gundamHeader {
   color:  #888888; /* Solid grey color */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Subtle text shadow */
-  font-size: 85px; /* Large font size */
+  font-size: 60px; /* Large font size */
 }
